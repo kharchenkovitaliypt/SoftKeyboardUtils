@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.RequiresApi;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -17,7 +16,6 @@ import java.lang.reflect.Method;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.RunnableFuture;
 
 public class SoftKeyboard {
     private static final String TAG = SoftKeyboard.class.getSimpleName();
@@ -124,7 +122,7 @@ public class SoftKeyboard {
 
     private static void checkFullScreenMode(FullScreenModeContext fullScreenModeContext) {
         boolean fullScreenMode = fullScreenModeContext.imm.isFullscreenMode();
-        Log.d(TAG, "checkFullScreenMode() called with: fullScreenModeContext = [" + fullScreenModeContext + "] + fullScreenMode: " + fullScreenMode);
+        //Log.d(TAG, "checkFullScreenMode() called with: fullScreenModeContext = [" + fullScreenModeContext + "] + fullScreenMode: " + fullScreenMode);
 
         if(fullScreenModeContext.value != fullScreenMode) {
             fullScreenModeContext.value = fullScreenMode;
