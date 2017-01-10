@@ -27,16 +27,10 @@ public class MainActivity extends AppCompatActivity {
 //                Log.d(TAG, "onGlobalLayout() rootView height: " + findViewById(R.id.scroll).getHeight() + ", root padding: " + rootBottomPadding);
 //            }
 //        });
-//        cancelableFullScreenMode = SoftKeyboard.setFullScreenModeChangeListener(fullScreenModeStateView, new SoftKeyboard.OnFullScreenModeChangedListener() {
-//            @Override
-//            public void onFullScreenModeChanged(boolean fullScreen) {
-//                fullScreenModeStateView.setText("onFullScreenModeChanged() fullScreen:" + fullScreen);
-//            }
-//        });
         cancelableOnShowChanged = SoftKeyboard.setOnShowChangedListener(this, new SoftKeyboard.OnShowChangedListener() {
             @Override
-            public void onShowChanged(boolean shown, boolean fullScreenMode, int onAppHeight) {
-                String text = "onShowChanged() shown:" + shown +  ", fullScreenMode:" + fullScreenMode + ", onAppHeight:" + onAppHeight;
+            public void onShowChanged(boolean shown, int onAppHeight) {
+                String text = "onShowChanged() shown:" + shown + ", onAppHeight:" + onAppHeight;
                 showChangedStateView.setText(text);
                 Log.d(TAG, text);
             }
